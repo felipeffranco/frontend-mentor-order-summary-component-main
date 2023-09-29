@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Red Hat Display', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+root variables
+*/
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+}
+
+
+/* 
+media > max-width to MOBILE 
+*/
+@media screen and (max-width: 375px) {
+	* {
+		background: var(--bright-blue);
+	}
+    section.card { 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column; 
+        margin-top: 100px;
+        background-color: var(--very-pale-blue);
+    }
+}
+
+
+/*
+media > min-width to DESKTOP
+*/
+@media screen and (min-width: 376px) {
+    body {
+        background: var(--pale-blue) url('../images/pattern-background-desktop.svg') no-repeat center top;
+        background-size: cover;
+    }
+	section {  
+        width: 450px;
+        margin: 102px auto;
+    }
+    section .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+        padding: 0 0 50px 0;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: rgba(62, 62, 187, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    section .card header { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 75px;
+        text-align: center;
+    }
+    section .card header h1 {
+        margin: 50px 0 22px 0;
+        font-size: 1.75rem;
+        font-weight: 900;
+    }
+    section .card header p {
+        line-height: 1.64rem;
+    }
+	
+}
