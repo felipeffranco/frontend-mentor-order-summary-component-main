@@ -48,12 +48,12 @@ table {
 root variables
 */
 :root {
-    --pale-blue: hsl(225, 100%, 94%);
-    --bright-blue: hsl(245, 75%, 52%);
+    --pale-blue: #e0e8ff;
+    --bright-blue: #3829e0;
 
-    --very-pale-blue: hsl(225, 100%, 98%);
-    --desaturated-blue: hsl(224, 23%, 55%);
-    --dark-blue: hsl(223, 47%, 23%);
+    --very-pale-blue: #f5f7ff;
+    --desaturated-blue: #7280a7;
+    --dark-blue: rgb(31, 47, 86);
 
 }
 
@@ -84,36 +84,114 @@ media > min-width to DESKTOP
         background: var(--pale-blue) url('../images/pattern-background-desktop.svg') no-repeat center top;
         background-size: cover;
     }
-	section {  
-        width: 450px;
-        margin: 102px auto;
-    }
-    section .card {
+    .card {
+        width: 350px;
+        padding: 0 50px;
+        margin: 102px auto 0;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         background-color: white;
-        padding: 0 0 50px 0;
         border-radius: 24px;
         overflow: hidden;
-        box-shadow: rgba(62, 62, 187, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        box-shadow: rgba(62, 62, 187, 0.15) 0px 50px 100px -20px, rgba(0, 0, 0, 0.15) 0px 30px 60px -30px;
     }
-    section .card header { 
+    .card-content { 
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 0 75px;
+        margin: 0 0 22px 0;
         text-align: center;
-    }
-    section .card header h1 {
+    } 
+    .card-content h1 {
         margin: 50px 0 22px 0;
         font-size: 1.75rem;
         font-weight: 900;
     }
-    section .card header p {
+    .card-content p {
         line-height: 1.64rem;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: var(--desaturated-blue)
     }
-	
+
+
+    
+    .annual-plan-box {
+        width: calc(100% - 40px);
+        margin: 0 0 36px 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--very-pale-blue);
+        border-radius: 10px;
+    }
+    .annual-plan-box div {
+        display: flex;
+        flex-direction: row;
+    }
+    .annual-plan-box img {
+        margin-right: 20px;
+    }
+    .annual-plan-box .annual-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .annual-plan-box h2 {
+        font-weight: 900;
+        font-size: 1rem;
+        color: var(--dark-blue);
+        margin: 5px 0 5px 0;
+        display: flex;
+        flex-direction: row;
+    }
+    .annual-plan-box p {
+        color: var(--desaturated-blue);
+        margin: 0;
+    }
+    .annual-plan-box a {
+        color: var(--bright-blue);
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+    .annual-plan-box a:hover {
+        opacity: 0.7;
+        text-decoration: none;
+    }
+
+    .card a.proceed-to-payment {
+        background-color: var(--bright-blue);
+        width: 100%;
+        padding: 17px 0;
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 35px;
+        -webkit-box-shadow: 0px 30px 24px -20px rgba(57,41,224,0.8);
+        -moz-box-shadow: 0px 30px 24px -20px rgba(57,41,224,0.8);
+        box-shadow: 0px 30px 24px -20px rgba(57,41,224,0.8);
+    }
+    .card a.proceed-to-payment:hover {
+        opacity: 0.7;
+    }
+
+    .card a.cancel-order {
+        text-decoration: none;
+        color: var(--desaturated-blue);
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 0.90rem;
+    }
+    .card a.cancel-order:hover {
+        color: black;
+    }
+
 }
